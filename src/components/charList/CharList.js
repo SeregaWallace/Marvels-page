@@ -1,3 +1,5 @@
+
+
 import './charList.scss';
 import abyss from '../../resources/img/abyss.jpg';
 

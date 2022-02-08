@@ -6,10 +6,6 @@ import './randomChar.scss';
 import mjolnir from '../../resources/img/mjolnir.png';
 
 class RandomChar extends Component {
-    constructor(props) {
-        super(props);
-        this.updateRandomChar();
-    }
 
     state = {
         char: {},
@@ -39,6 +35,10 @@ class RandomChar extends Component {
             .getCharacter(id)
             .then(this.charLoaded)
             .catch(this.onError)
+    }
+
+    componentDidMount() {
+        this.updateRandomChar();
     }
 
     render() {
