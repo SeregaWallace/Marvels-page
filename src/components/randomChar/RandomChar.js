@@ -29,8 +29,15 @@ class RandomChar extends Component {
         });
     }
 
+    loadingTrue = () => {
+        this.setState({
+            loading: true,
+        });
+    }
+
     updateRandomChar = () => {
         const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
+        this.loadingTrue()
         this.marvelService
             .getCharacter(id)
             .then(this.charLoaded)
